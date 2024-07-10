@@ -1,0 +1,202 @@
+lang="zh-TW"
+
+<title>模型專賣店
+
+navbar
+會員註冊
+會員登入
+會員中心
+最新活動
+查訂單
+折價券
+購物車
+企業專區
+	認識企業文化
+	全台門市資訊
+	供應商報價服務
+	加盟專區
+	投資人專區
+
+sidebar 分類項目
+fas fa-fire fa-lg fa-fw 鋼彈模型
+  水星的魔女
+  1/100 MG
+  1/100 RE系列
+
+fas fa-paw fa-lg fa-fw 動畫分類
+  SPYxFAMILY 間諜家家酒
+  七龍珠
+  福音戰士Evangelion
+
+fas fa-user fa-lg fa-fw 景品動漫周邊
+  PVC、公仔、景品
+  可動公仔/可動玩偶
+  轉蛋 食玩 盒玩 盲盒
+
+fas fa-user fa-lg fa-fw 好微笑 GoodSmile
+  黏土人 Nendoroid
+  figma可動系列
+  ACT MODE 系列
+
+carousel
+pic01.jpg
+alt=真哥吉拉/-1.0哥吉拉
+h3=真哥吉拉/-1.0哥吉拉
+EZHOBI 巨蛋獸 真哥吉拉/-1.0哥吉拉
+
+pic02.jpg
+alt=始源我王凱牙
+h3=始源我王凱牙
+AMAKLINITECH 始源我王凱牙
+
+pic03.jpg
+alt=水星的魔女
+h3=水星的魔女
+水星的魔女 SDCS異靈鋼彈
+
+pic04.jpg
+alt=飛翼零式鋼彈
+h3=飛翼零式鋼彈
+飛翼零式隨時加開 熱烈預購中！
+
+content
+pic01.jpg
+alt=貞子 PVC 附恐怖臉
+h3=貞子 PVC 附恐怖臉
+預購25年3月 壽屋 1/7 HORROR美少女 美少女 貞子 PVC 附恐怖臉 完成品
+TWD $4,750
+TWD $3,980
+
+buttom
+更多資訊
+放購物車
+
+pic02.jpg
+alt=濕身阿爾維娜
+h3=濕身阿爾維娜
+預購25年3月 SIKI ANIM 1/7 PVC人形 濕身阿爾維娜 豪華版 附掛軸 PVC 完成品
+TWD $2,000
+TWD $1,650
+
+pic03.jpg
+alt=被束縛的貓 露芙娜
+h3=被束縛的貓 露芙娜
+預購25年3月 SIKI ANIM 1/7 PVC人形 被束縛的貓 露芙娜 豪華版 附掛軸 PVC 完成品
+TWD $2,000
+TWD $1,650
+
+pic04.jpg
+alt=DMC5 尼祿
+h3=DMC5 尼祿
+預購25年2月 壽屋 1/8 ARTFX J 惡魔獵人5 DMC5 尼祿 PVC 完成品
+TWD $6,520
+TWD $5,200
+
+pic05.jpg
+alt=DMC5 但丁
+h3=DMC5 但丁
+預購25年1月 壽屋 1/8 ARTFX J 惡魔獵人5 DMC5 但丁 PVC 完成品
+TWD $6,050
+TWD $4,800
+
+pic06.jpg
+alt=命運石之門 牧瀨紅莉栖
+h3=命運石之門 牧瀨紅莉栖
+預購25年6月 好微笑 代理版 1/7 命運石之門 牧瀨紅莉栖 ～命運探知魔眼～ PVC 完成品
+TWD $7,999
+TWD $7,060
+
+pic07.jpg
+alt=葬送的芙莉蓮 芙莉蓮
+h3=葬送的芙莉蓮 芙莉蓮
+預購25年6月 好微笑 代理版 1/7 葬送的芙莉蓮 芙莉蓮～黃昏色的魔法～ PVC 完成品
+TWD $4,450
+TWD $3,900
+
+pic08.jpg
+alt=倩咪 嘉米 CAMMY
+h3=倩咪 嘉米 CAMMY
+預購25年1月 卡普空 CFB 快打旋風6 倩咪 嘉米 CAMMY PVC 完成品
+TWD $6,540
+TWD $5,799
+
+pic09.jpg
+alt=賽馬娘Pretty Derby 魯道夫象徵
+h3=賽馬娘Pretty Derby 魯道夫象徵
+預購25年3月 好微笑 代理版 1/7 賽馬娘Pretty Derby 魯道夫象徵 決勝服 PVC 完成品
+TWD $6,399
+TWD $5,280
+
+pic10.jpg
+alt=費倫 葬送的芙莉蓮
+h3=費倫 葬送的芙莉蓮
+預購12月 好微笑 GSC 代理版 POP UP PARADE 費倫 葬送的芙莉蓮 完成品
+TWD $950
+TWD $820
+
+pic11.jpg
+alt=hololive 噶嗚‧古拉 GURA
+h3=hololive 噶嗚‧古拉 GURA
+預購25年1月 好微笑 GSC 代理版 POP UP PARADE hololive 噶嗚‧古拉 GURA
+TWD $1,099
+TWD $940
+
+pic12.jpg
+alt=音速索尼克 一拳超人
+h3=音速索尼克 一拳超人
+預購12月 好微笑 GSC 代理版 POP UP PARADE 音速索尼克 一拳超人 完成品
+TWD $950
+TWD $830
+
+Scontent
+<img = "images/QRcode02.png" alt="QRcode">
+
+fas fa-thumbs-up fa-5x
+關於
+聯絡我們
+部落格
+
+fas fa-truck fa-5x
+全部商品
+訂單查詢
+訂單相關說明
+
+fas fa-users fa-5x
+付款方式說明
+寄送方式說明
+售後服務說明
+
+fas fa-comments-dollar fa-5x
+現金積點規則
+
+fas fa-question fa-5x
+FAQ 常見問題
+系統使用問題
+產品問題資詢
+大宗採購問題
+=====another=====
+fas fa-comments-dollar fa-5x
+好康大放送
+新會員禮包
+活動得獎名單
+
+fas fa-users fa-5x
+客戶服務
+訂單/配送進度查詢
+取消訂單/退貨
+更改配送地址
+追蹤清單
+12H速達服務
+折價券說明
+
+fas  fa-thumbs-up fa-5x
+關於我們
+企業官網
+招商專區
+人才招募
+
+
+footer
+中彰投分署科技股份有限公司 40767台中市西屯區工業區一路100號  電話：04-23592181 免付費電話：0800-777888
+企業通過ISO/IEC27001認證，食品業者登錄字號：A-127360000-00000-0
+版權所有 copyright © 2024 WDA.com Inc. All Rights Reserved.

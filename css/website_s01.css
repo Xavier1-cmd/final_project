@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap');
+
+body{
+    font-family:Arial, 'Noto Serif TC', sans-serif;
+    font-style: 14px;
+    padding-top: 60px;
+}
+
+.navbar{
+    padding: 0px;
+    background-color: #C7000A;
+}
+
+.nav-link{
+    color:#fff !important;
+    font-weight: bolder;
+    font-size: 1.5vw;
+}
+.dropdown-item{
+    color: #337ab7 !important;
+    font-size: 1.2vw;
+}
+.dropdown .dropdown-item:hover, .dropdown .dropdown-item:focus{
+    color:#fff !important;
+    background-color: #337ab7;
+}
+
+#content{
+    margin-top: 10px;
+}
+.row .col-md-2 .sidebar,.accordion-button{
+    border: 2px solid #dfdfdf;
+    background-color: #f7f7f7;
+}
+
+.sidebar{
+    padding: 5px;
+}
+
+.accordion-button{
+    font-size: 1.5vw;
+}
+.accordion-body table td:hover {
+  background-color: antiquewhite;
+}
+.accordion-body {
+  padding: 0px;
+}
+.table {
+  margin-bottom: 0px;
+}
+.table td {
+  border-top: none;
+  border-bottom: 1px solid #dee2e6;
+  padding-left: 2rem;
+  font-size: 0.8vw;
+}
+td > em {
+  margin-right: 5px;
+}
+
+#aboutme {
+  background-color: #31384a;
+  color: #fff;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#last-data {
+  height: 100px;
+  background-color: #b4b4b4;
+  padding-top: 10px;
+}
