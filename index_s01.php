@@ -128,7 +128,7 @@
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingThree">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  <i class="fas fa-ghost fa-lg fa-fw"></i><span class="pl-1">景品動漫周邊</span>
+                  <i class="fas fa-ghost fa-lg fa-fw"></i><span class="pl-1">動漫周邊</span>
                 </button>
               </h2>
               <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
@@ -217,41 +217,45 @@
           <hr>
           <div class="row text-center">
             <div class="card col-md-3">
-              <img src="./product_img/pic0101.jpg" class="card-img-top" alt="台大葉黃素膠囊">
+              <img src="./product_img/pic0101.jpg" class="card-img-top" alt="濕身阿爾維娜">
               <div class="card-body">
-                <h5 class="card-title">台大葉黃素膠囊</h5>
-                <p class="card-text">游離型軟膠囊，採用金盞花植物萃取含20﹪葉黃素，調節生理機能，營養補給，健康維持</p>
-                <p class="card-text">NT3600</p>
+                <h5 class="card-title">濕身阿爾維娜</h5>
+                <p class="card-text">預購25年3月 SIKI ANIM 1/7 PVC人形 濕身阿爾維娜 豪華版 附掛軸 PVC 完成品</p>
+                <span class="card-text text-decoration-line-through">TWD $2,000</span>
+                <p class="card-text">TWD $1,650</p>
                 <a href="#" class="btn btn-primary">更多資訊</a>
                 <a href="#" class="btn btn-success">放購物車</a>
               </div>
             </div>
             <div class="card col-md-3">
-              <img src="./product_img/pic0102.jpg" class="card-img-top" alt="黃金燕窩生物纖維面膜">
+              <img src="./product_img/pic0102.jpg" class="card-img-top" alt="被束縛的貓 露芙娜">
               <div class="card-body">
-                <h5 class="card-title">黃金燕窩生物纖維面膜</h5>
-                <p class="card-text">手術後保養，約會前急救聖品，媲美專櫃等級！網友推薦最新使用，肌膚很水嫩，感覺很透亮。</p>
-                <p class="card-text">NT1200</p>
+                <h5 class="card-title">被束縛的貓 露芙娜</h5>
+                <p class="card-text">預購25年3月 SIKI ANIM 1/7 PVC人形 被束縛的貓 露芙娜 豪華版 附掛軸 PVC 完成品</p>
+                <span class="card-text text-decoration-line-through">TWD $2,000</span>
+                <p class="card-text">TWD $1,650</p>
                 <a href="#" class="btn btn-primary">更多資訊</a>
                 <a href="#" class="btn btn-success">放購物車</a>
               </div>
             </div>
             <div class="card col-md-3">
-              <img src="./product_img/pic0103.jpg" class="card-img-top" alt="MIZON 蝸牛全效活膚霜">
+              <img src="./product_img/pic0103.jpg" class="card-img-top" alt="費倫 葬送的芙莉蓮">
               <div class="card-body">
-                <h5 class="card-title">MIZON 蝸牛全效活膚霜</h5>
-                <p class="card-text">無論混合肌、油性肌、痘痘肌、乾性肌、過敏肌等《任何膚質適用》，是修護型保養品！！</p>
-                <p class="card-text">NT690</p>
+                <h5 class="card-title">費倫 葬送的芙莉蓮</h5>
+                <p class="card-text">預購12月 好微笑 GSC 代理版 POP UP PARADE 費倫 葬送的芙莉蓮 完成品</p>
+                <span class="card-text text-decoration-line-through">TWD $950</span>
+                <p class="card-text">TWD $820</p>
                 <a href="#" class="btn btn-primary">更多資訊</a>
                 <a href="#" class="btn btn-success">放購物車</a>
               </div>
             </div>
             <div class="card col-md-3">
-              <img src="./product_img/pic0104.jpg" class="card-img-top" alt="星期四農莊迷迭香精油">
+              <img src="./product_img/pic0104.jpg" class="card-img-top" alt="hololive 噶嗚‧古拉 GURA">
               <div class="card-body">
-                <h5 class="card-title">星期四農莊迷迭香精油</h5>
-                <p class="card-text">迷迭香精油+薰衣草精油(大自然植物舒眠系列)！！</p>
-                <p class="card-text">NT1269</p>
+                <h5 class="card-title">hololive 噶嗚‧古拉 GURA</h5>
+                <p class="card-text">預購25年1月 好微笑 GSC 代理版 POP UP PARADE hololive 噶嗚‧古拉 GURA</p>
+                <span class="card-text text-decoration-line-through">TWD $1,099</span>
+                <p class="card-text">TWD $940</p>
                 <a href="#" class="btn btn-primary">更多資訊</a>
                 <a href="#" class="btn btn-success">放購物車</a>
               </div>
