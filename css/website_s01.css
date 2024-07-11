@@ -4,11 +4,14 @@ body{
     font-family:Arial, 'Noto Serif TC', sans-serif;
     font-style: 14px;
     padding-top: 60px;
+    background: url(../images/bg.jpg) center center repeat #000000;
 }
+
+.pl-1 { padding-left: 8px;}
 
 .navbar{
     padding: 0px;
-    background-color: #C7000A;
+    background-color: #343a40;
 }
 
 .nav-link{

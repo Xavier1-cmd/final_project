@@ -80,7 +80,7 @@
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingOne">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  <i class="fas fa-fire fa-lg fa-fw"></i>彩妝專區
+                  <i class="fas fa-bomb fa-lg fa-fw"></i><span class="pl-1">鋼彈模型</span>
                 </button>
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
@@ -88,16 +88,13 @@
                   <table class="table">
                     <tbody>
                       <tr>
-                        <td><a href="#"><em class="fas fa-edit"></em>隔離/防曬/飾底乳</a></td>
+                        <td><a href="#"><em class="fas fa-edit"></em>水星的魔女</a></td>
                       </tr>
                       <tr>
-                        <td><a href="#"><em class="fas fa-edit"></em>BB霜/CC霜</a></td>
+                        <td><a href="#"><em class="fas fa-edit"></em>1/100 MG</a></td>
                       </tr>
                       <tr>
-                        <td><a href="#"><em class="fas fa-edit"></em>粉餅(蕊)/蜜粉/蜜粉/海綿</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#"><em class="fas fa-edit"></em>遮瑕/毛孔/打亮</a></td>
+                        <td><a href="#"><em class="fas fa-edit"></em>1/100 RE系列</a></td>
                       </tr>
                     </tbody>
                   </table>
@@ -107,7 +104,7 @@
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingTwo">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  <i class="fas fa-paw fa-lg fa-fw"></i>臉部保養
+                  <i class="fas fa-wand-sparkles fa-lg fa-fw"></i><span class="pl-1">動畫分類</span>
                 </button>
               </h2>
               <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
@@ -115,22 +112,13 @@
                   <table class="table">
                     <tbody>
                       <tr>
-                        <td><a href="#"><em class="fas fa-edit"></em>天然成分調理專區</a></td>
+                        <td><a href="#"><em class="fas fa-edit"></em>SPYxFAMILY 間諜家家酒</a></td>
                       </tr>
                       <tr>
-                        <td><a href="#"><em class="fas fa-edit"></em>婦嬰,敏感受損調理</a></td>
+                        <td><a href="#"><em class="fas fa-edit"></em>七龍珠</a></td>
                       </tr>
                       <tr>
-                        <td><a href="#"><em class="fas fa-edit"></em>Neogen</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#"><em class="fas fa-edit"></em>萊雅</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#"><em class="fas fa-edit"></em>肌研</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#"><em class="fas fa-edit"></em>露得清</a></td>
+                        <td><a href="#"><em class="fas fa-edit"></em>福音戰士Evangelion</a></td>
                       </tr>
                     </tbody>
                   </table>
@@ -140,7 +128,7 @@
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingThree">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  <i class="fas fa-user fa-lg fa-fw"></i>美膚保養
+                  <i class="fas fa-ghost fa-lg fa-fw"></i><span class="pl-1">動漫周邊</span>
                 </button>
               </h2>
               <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
@@ -148,16 +136,13 @@
                   <table class="table">
                     <tbody>
                       <tr>
-                        <td><a href="#"><em class="fas fa-edit"></em>按摩油</a></td>
+                        <td><a href="#"><em class="fas fa-edit"></em>PVC、公仔、景品</a></td>
                       </tr>
                       <tr>
-                        <td><a href="#"><em class="fas fa-edit"></em>纖體保養</a></td>
+                        <td><a href="#"><em class="fas fa-edit"></em>可動公仔/可動玩偶</a></td>
                       </tr>
                       <tr>
-                        <td><a href="#"><em class="fas fa-edit"></em>身體香氛</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#"><em class="fas fa-edit"></em>身體防曬</a></td>
+                        <td><a href="#"><em class="fas fa-edit"></em>轉蛋 食玩 盒玩 盲盒</a></td>
                       </tr>
                     </tbody>
                   </table>
@@ -167,7 +152,7 @@
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingFour">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                  <i class="fas fa-user fa-lg fa-fw"></i>食品保健
+                  <i class="fas fa-face-smile fa-lg fa-fw"></i><span class="pl-1">好微笑 GoodSmile</span>
                 </button>
               </h2>
               <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
@@ -175,25 +160,13 @@
                   <table class="table">
                     <tbody>
                       <tr>
-                        <td><a href="#"><em class="fas fa-edit"></em>肝臟保養／芝麻素</a></td>
+                        <td><a href="#"><em class="fas fa-edit"></em>黏土人 Nendoroid</a></td>
                       </tr>
                       <tr>
-                        <td><a href="#"><em class="fas fa-edit"></em>益生菌／乳酸菌</a></td>
+                        <td><a href="#"><em class="fas fa-edit"></em>figma可動系列</a></td>
                       </tr>
                       <tr>
-                        <td><a href="#"><em class="fas fa-edit"></em>鐵／葉酸／孕期補充</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#"><em class="fas fa-edit"></em>蔓越莓／女性保養</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#"><em class="fas fa-edit"></em>男性健康補充</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#"><em class="fas fa-edit"></em>銀髮健康補充</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#"><em class="fas fa-edit"></em>成人特殊營養品</a></td>
+                        <td><a href="#"><em class="fas fa-edit"></em>ACT MODE 系列</a></td>
                       </tr>
                     </tbody>
                   </table>
@@ -211,24 +184,24 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="./product_img/pic1.jpg" class="d-block w-100" alt="雙11！天天最高送1111">
+                <img src="./product_img/pic1.jpg" class="d-block w-100" alt="水星的魔女 SDCS異靈鋼彈">
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>雙11！天天最高送1111</h5>
-                  <p>購物金活動採單日累計消費滿額即可參加登記送活動，活動期間僅需登記一次，部分商品不適用，詳見說明。</p>
+                  <h5></h5>
+                  <p></p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="./product_img/pic2.jpg" class="d-block w-100" alt="建康養生的好幫手">
+                <img src="./product_img/pic2.jpg" class="d-block w-100" alt="AMAKLINITECH 始源我王凱牙">
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>建康養生的好幫手</h5>
-                  <p>黑金鑽土雞18小時純粹滴煉，去油濾渣無膽固醇，殺菌包裝常溫保存，含BACC、雙肌肽、牛磺酸、小分子蛋白質等，可單飲或當高湯華陀扶元堂養生飲品系列3折優惠，歡迎選購</p>
+                  <h5></h5>
+                  <p></p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="./product_img/pic3.jpg" class="d-block w-100" alt="頂級保濕面膜，臉部滋養的好幫手">
+                <img src="./product_img/pic3.jpg" class="d-block w-100" alt="飛翼零式隨時加開 熱烈預購中！">
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>頂級保濕面膜，臉部滋養的好幫手</h5>
-                  <p>保養界的藝術品！內到外優雅自成一格，堅持保養始於自然，升級膚質0負擔，讓肌膚與生活更美好。源自台灣的國際保養品牌！</p>
+                  <h5></h5>
+                  <p></p>
                 </div>
               </div>
             </div>
@@ -244,41 +217,45 @@
           <hr>
           <div class="row text-center">
             <div class="card col-md-3">
-              <img src="./product_img/pic0101.jpg" class="card-img-top" alt="台大葉黃素膠囊">
+              <img src="./product_img/pic0101.jpg" class="card-img-top" alt="濕身阿爾維娜">
               <div class="card-body">
-                <h5 class="card-title">台大葉黃素膠囊</h5>
-                <p class="card-text">游離型軟膠囊，採用金盞花植物萃取含20﹪葉黃素，調節生理機能，營養補給，健康維持</p>
-                <p class="card-text">NT3600</p>
+                <h5 class="card-title">濕身阿爾維娜</h5>
+                <p class="card-text">預購25年3月 SIKI ANIM 1/7 PVC人形 濕身阿爾維娜 豪華版 附掛軸 PVC 完成品</p>
+                <span class="card-text text-decoration-line-through">TWD $2,000</span>
+                <p class="card-text">TWD $1,650</p>
                 <a href="#" class="btn btn-primary">更多資訊</a>
                 <a href="#" class="btn btn-success">放購物車</a>
               </div>
             </div>
             <div class="card col-md-3">
-              <img src="./product_img/pic0102.jpg" class="card-img-top" alt="黃金燕窩生物纖維面膜">
+              <img src="./product_img/pic0102.jpg" class="card-img-top" alt="被束縛的貓 露芙娜">
               <div class="card-body">
-                <h5 class="card-title">黃金燕窩生物纖維面膜</h5>
-                <p class="card-text">手術後保養，約會前急救聖品，媲美專櫃等級！網友推薦最新使用，肌膚很水嫩，感覺很透亮。</p>
-                <p class="card-text">NT1200</p>
+                <h5 class="card-title">被束縛的貓 露芙娜</h5>
+                <p class="card-text">預購25年3月 SIKI ANIM 1/7 PVC人形 被束縛的貓 露芙娜 豪華版 附掛軸 PVC 完成品</p>
+                <span class="card-text text-decoration-line-through">TWD $2,000</span>
+                <p class="card-text">TWD $1,650</p>
                 <a href="#" class="btn btn-primary">更多資訊</a>
                 <a href="#" class="btn btn-success">放購物車</a>
               </div>
             </div>
             <div class="card col-md-3">
-              <img src="./product_img/pic0103.jpg" class="card-img-top" alt="MIZON 蝸牛全效活膚霜">
+              <img src="./product_img/pic0103.jpg" class="card-img-top" alt="費倫 葬送的芙莉蓮">
               <div class="card-body">
-                <h5 class="card-title">MIZON 蝸牛全效活膚霜</h5>
-                <p class="card-text">無論混合肌、油性肌、痘痘肌、乾性肌、過敏肌等《任何膚質適用》，是修護型保養品！！</p>
-                <p class="card-text">NT690</p>
+                <h5 class="card-title">費倫 葬送的芙莉蓮</h5>
+                <p class="card-text">預購12月 好微笑 GSC 代理版 POP UP PARADE 費倫 葬送的芙莉蓮 完成品</p>
+                <span class="card-text text-decoration-line-through">TWD $950</span>
+                <p class="card-text">TWD $820</p>
                 <a href="#" class="btn btn-primary">更多資訊</a>
                 <a href="#" class="btn btn-success">放購物車</a>
               </div>
             </div>
             <div class="card col-md-3">
-              <img src="./product_img/pic0104.jpg" class="card-img-top" alt="星期四農莊迷迭香精油">
+              <img src="./product_img/pic0104.jpg" class="card-img-top" alt="hololive 噶嗚‧古拉 GURA">
               <div class="card-body">
-                <h5 class="card-title">星期四農莊迷迭香精油</h5>
-                <p class="card-text">迷迭香精油+薰衣草精油(大自然植物舒眠系列)！！</p>
-                <p class="card-text">NT1269</p>
+                <h5 class="card-title">hololive 噶嗚‧古拉 GURA</h5>
+                <p class="card-text">預購25年1月 好微笑 GSC 代理版 POP UP PARADE hololive 噶嗚‧古拉 GURA</p>
+                <span class="card-text text-decoration-line-through">TWD $1,099</span>
+                <p class="card-text">TWD $940</p>
                 <a href="#" class="btn btn-primary">更多資訊</a>
                 <a href="#" class="btn btn-success">放購物車</a>
               </div>
