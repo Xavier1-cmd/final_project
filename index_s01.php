@@ -176,7 +176,7 @@
           </div>
         </div>
         <div class="col-md-10">
-          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+          <!-- <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -213,7 +213,7 @@
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
-          </div>
+          </div> -->
           <hr>
           <div class="row text-center">
             <div class="card col-md-3">
@@ -227,7 +227,7 @@
                 <a href="#" class="btn btn-success">放購物車</a>
               </div>
             </div>
-            <div class="card col-md-3">
+            <!-- <div class="card col-md-3">
               <img src="./product_img/pic0102.jpg" class="card-img-top" alt="被束縛的貓 露芙娜">
               <div class="card-body">
                 <h5 class="card-title">被束縛的貓 露芙娜</h5>
@@ -259,8 +259,8 @@
                 <a href="#" class="btn btn-primary">更多資訊</a>
                 <a href="#" class="btn btn-success">放購物車</a>
               </div>
-            </div>
-            <div class="card col-md-3">
+            </div> -->
+            <!-- <div class="card col-md-3">
               <img src="./product_img/pic0201.jpg" class="card-img-top" alt="頂級金貝貝棉柔魔術氈">
               <div class="card-body">
                 <h5 class="card-title">頂級金貝貝棉柔魔術氈</h5>
@@ -339,7 +339,7 @@
                 <a href="#" class="btn btn-primary">更多資訊</a>
                 <a href="#" class="btn btn-success">放購物車</a>
               </div>
-            </div>
+            </div> -->
           </div>
           <div class="row mt-2">
             <nav aria-label="Page navigation example">
