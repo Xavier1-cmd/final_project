@@ -206,57 +206,7 @@ $total_pages = ceil($total_records / $pageRow_records);
           </div>
         </div>
         <div class="col-md-10">
-          <!-- <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="./product_img/pic1.jpg" class="d-block w-100" alt="水星的魔女 SDCS異靈鋼彈">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5></h5>
-                  <p></p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="./product_img/pic2.jpg" class="d-block w-100" alt="AMAKLINITECH 始源我王凱牙">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5></h5>
-                  <p></p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="./product_img/pic3.jpg" class="d-block w-100" alt="飛翼零式隨時加開 熱烈預購中！">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5></h5>
-                  <p></p>
-                </div>
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div> -->
-          <hr>
           <div class="row text-center">
-            <!-- <div class="card col-md-3">
-              <img src="./product_img/pic0101.jpg" class="card-img-top" alt="濕身阿爾維娜">
-              <div class="card-body">
-                <h5 class="card-title">濕身阿爾維娜</h5>
-                <p class="card-text">預購25年3月 SIKI ANIM 1/7 PVC人形 濕身阿爾維娜 豪華版 附掛軸 PVC 完成品</p>
-                <span class="card-text text-decoration-line-through">TWD $2,000</span>
-                <p class="card-text">TWD $1,650</p>
-                <a href="#" class="btn btn-primary">更多資訊</a>
-                <a href="#" class="btn btn-success">放購物車</a>
-              </div>
-            </div> -->
 
             <!-- 顯示商品資訊 -->
             <?php while ($row_RecAlbum = $RecAlbum->fetch_assoc()) { ?>
@@ -280,19 +230,23 @@ $total_pages = ceil($total_records / $pageRow_records);
                     <div class="albuminfo"><a href="albumshow.php?id=<?php echo $row_RecAlbum["album_id"]; ?>"><?php echo $row_RecAlbum["album_title"]; ?></a><br />
                       <span class="smalltext">共 <?php echo $row_RecAlbum["albumNum"]; ?> 張</span><br>
                       <br>
+                      <a href="?action=delete&id=<?php echo $row_RecAlbum["album_id"]; ?>" class="smalltext" onClick="javascript:return deletesure();">(刪除相簿)</a><br>
                     </div>
+                    <!-- <div class="albuminfo"><a href="adminfix.php?id=<?php echo $row_RecAlbum["album_id"]; ?>"><?php echo $row_RecAlbum["album_title"]; ?></a><br />
+                      <span class="smalltext">共 <?php echo $row_RecAlbum["albumNum"]; ?> 張</span><br>
+                    </div> -->
                   </div>
                 </div>
               </div>
             <?php } ?>
 
-            <!-- 網路相簿程式 -->
-            <!-- <table width="778" border="0" align="center" cellpadding="0" cellspacing="0">
+
+            <table width="778" border="0" align="center" cellpadding="0" cellspacing="0">
               <tr>
-                <td height="124" valign="top" background="images/album_r1_c1.jpg">
+                <td height="124" valign="top" background="images/">
                   <div class="titleDiv"> [生活、旅行的記錄]<br />
                   </div>
-                  <div class="menulink"><a href="index.php">[相簿首頁]</a> <a href="login.php">[相簿管理]</a></div>
+                  <div class="menulink"><a href="admin.php">[管理首頁]</a> <a href="?logout=true">[登出系統]</a></div>
                 </td>
               </tr>
               <tr>
@@ -301,15 +255,15 @@ $total_pages = ceil($total_records / $pageRow_records);
                     <table width="90%" border="0" align="center" cellpadding="4" cellspacing="0">
                       <tr>
                         <td>
-                          <div class="subjectDiv"> 網路相簿總覽 </div>
-                          <div class="actionDiv">相簿總數: <?php echo $total_records; ?></div>
-                          <div class="normalDiv"></div>
+                          <div class="subjectDiv"> 網路相簿管理界面 </div>
+                          <div class="actionDiv">相簿總數: <?php echo $total_records; ?>，<a href="adminadd.php">新增相簿</a></div>
+                          <div class="normaldesc"></div>
                           <?php while ($row_RecAlbum = $RecAlbum->fetch_assoc()) { ?>
                             <div class="albumDiv">
-                              <div class="picDiv"><a href="albumshow.php?id=<?php echo $row_RecAlbum["album_id"]; ?>"><?php if ($row_RecAlbum["albumNum"] == 0) { ?><img src="images/nopic.png" alt="暫無圖片" width="120" height="120" border="0" /><?php } else { ?><img src="photos/<?php echo $row_RecAlbum["ap_picurl"]; ?>" alt="<?php echo $row_RecAlbum["album_title"]; ?>" width="120" height="120" border="0" /><?php } ?></a></div>
-                              <div class="albuminfo"><a href="albumshow.php?id=<?php echo $row_RecAlbum["album_id"]; ?>"><?php echo $row_RecAlbum["album_title"]; ?></a><br />
+                              <div class="picDiv"><a href="adminfix.php?id=<?php echo $row_RecAlbum["album_id"]; ?>"><?php if ($row_RecAlbum["albumNum"] == 0) { ?><img src="images/nopic.png" alt="暫無圖片" width="120" height="120" border="0" /><?php } else { ?><img src="photos/<?php echo $row_RecAlbum["ap_picurl"]; ?>" alt="<?php echo $row_RecAlbum["album_title"]; ?>" width="120" height="120" border="0" /><?php } ?></a></div>
+                              <div class="albuminfo"><a href="adminfix.php?id=<?php echo $row_RecAlbum["album_id"]; ?>"><?php echo $row_RecAlbum["album_title"]; ?></a><br />
                                 <span class="smalltext">共 <?php echo $row_RecAlbum["albumNum"]; ?> 張</span><br>
-                                <br>
+                                <a href="?action=delete&id=<?php echo $row_RecAlbum["album_id"]; ?>" class="smalltext" onClick="javascript:return deletesure();">(刪除相簿)</a><br>
                               </div>
                             </div>
                           <?php } ?>
@@ -348,141 +302,9 @@ $total_pages = ceil($total_records / $pageRow_records);
               <tr>
                 <td><img name="album_r4_c1" src="images/album_r4_c1.jpg" width="778" height="24" border="0" id="album_r4_c1" alt="" /></td>
               </tr>
-            </table> -->
+            </table>
 
-            <!-- <div class="card col-md-3">
-              <img src="./product_img/pic0102.jpg" class="card-img-top" alt="被束縛的貓 露芙娜">
-              <div class="card-body">
-                <h5 class="card-title">被束縛的貓 露芙娜</h5>
-                <p class="card-text">預購25年3月 SIKI ANIM 1/7 PVC人形 被束縛的貓 露芙娜 豪華版 附掛軸 PVC 完成品</p>
-                <span class="card-text text-decoration-line-through">TWD $2,000</span>
-                <p class="card-text">TWD $1,650</p>
-                <a href="#" class="btn btn-primary">更多資訊</a>
-                <a href="#" class="btn btn-success">放購物車</a>
-              </div>
-            </div>
-            <div class="card col-md-3">
-              <img src="./product_img/pic0103.jpg" class="card-img-top" alt="費倫 葬送的芙莉蓮">
-              <div class="card-body">
-                <h5 class="card-title">費倫 葬送的芙莉蓮</h5>
-                <p class="card-text">預購12月 好微笑 GSC 代理版 POP UP PARADE 費倫 葬送的芙莉蓮 完成品</p>
-                <span class="card-text text-decoration-line-through">TWD $950</span>
-                <p class="card-text">TWD $820</p>
-                <a href="#" class="btn btn-primary">更多資訊</a>
-                <a href="#" class="btn btn-success">放購物車</a>
-              </div>
-            </div>
-            <div class="card col-md-3">
-              <img src="./product_img/pic0104.jpg" class="card-img-top" alt="hololive 噶嗚‧古拉 GURA">
-              <div class="card-body">
-                <h5 class="card-title">hololive 噶嗚‧古拉 GURA</h5>
-                <p class="card-text">預購25年1月 好微笑 GSC 代理版 POP UP PARADE hololive 噶嗚‧古拉 GURA</p>
-                <span class="card-text text-decoration-line-through">TWD $1,099</span>
-                <p class="card-text">TWD $940</p>
-                <a href="#" class="btn btn-primary">更多資訊</a>
-                <a href="#" class="btn btn-success">放購物車</a>
-              </div>
-            </div> -->
-            <!-- <div class="card col-md-3">
-              <img src="./product_img/pic0201.jpg" class="card-img-top" alt="頂級金貝貝棉柔魔術氈">
-              <div class="card-body">
-                <h5 class="card-title">頂級金貝貝棉柔魔術氈</h5>
-                <p class="card-text">金貝貝棉柔魔術氈XXL27+1片【6包/箱】，適用15公斤以上</p>
-                <p class="card-text">NT1560</p>
-                <a href="#" class="btn btn-primary">更多資訊</a>
-                <a href="#" class="btn btn-success">放購物車</a>
-              </div>
-            </div>
-            <div class="card col-md-3">
-              <img src="./product_img/pic0202.jpg" class="card-img-top" alt="櫻桃肌粉餅撲角型-3入">
-              <div class="card-body">
-                <h5 class="card-title">櫻桃肌粉餅撲角型-3入</h5>
-                <p class="card-text">【IH】櫻桃肌粉餅撲角型-3入 CB-3204，乾濕兩用的粉餅專用粉撲。</p>
-                <p class="card-text">NT119</p>
-                <a href="#" class="btn btn-primary">更多資訊</a>
-                <a href="#" class="btn btn-success">放購物車</a>
-              </div>
-            </div>
-            <div class="card col-md-3">
-              <img src="./product_img/pic0203.jpg" class="card-img-top" alt="NOYL化妝刷套裝組">
-              <div class="card-body">
-                <h5 class="card-title">NOYL化妝刷套裝組</h5>
-                <p class="card-text">NOYL化妝刷套裝組(附收納袋) NY-369，保存期限：7年</p>
-                <p class="card-text">NT369</p>
-                <a href="#" class="btn btn-primary">更多資訊</a>
-                <a href="#" class="btn btn-success">放購物車</a>
-              </div>
-            </div>
-            <div class="card col-md-3">
-              <img src="./product_img/pic0204.jpg" class="card-img-top" alt="3D蘋果光氣墊粉餅">
-              <div class="card-body">
-                <h5 class="card-title">3D蘋果光氣墊粉餅</h5>
-                <p class="card-text">【Keep in touch】3D蘋果光氣墊粉餅，15g+15g(買一送一補充蕊)。</p>
-                <p class="card-text">NT1680</p>
-                <a href="#" class="btn btn-primary">更多資訊</a>
-                <a href="#" class="btn btn-success">放購物車</a>
-              </div>
-            </div>
-            <div class="card col-md-3">
-              <img src="./product_img/pic0301.jpg" class="card-img-top" alt="EVE'S 魔術性感美唇膏">
-              <div class="card-body">
-                <h5 class="card-title">EVE'S 魔術性感美唇膏</h5>
-                <p class="card-text">魔術性感美唇膏，不沾杯超持久唇色，想不到的魔術效果持續久久。</p>
-                <p class="card-text">NT580</p>
-                <a href="#" class="btn btn-primary">更多資訊</a>
-                <a href="#" class="btn btn-success">放購物車</a>
-              </div>
-            </div>
-            <div class="card col-md-3">
-              <img src="./product_img/pic0302.jpg" class="card-img-top" alt="DMC三合一精華霜">
-              <div class="card-body">
-                <h5 class="card-title">DMC三合一精華霜</h5>
-                <p class="card-text">DMC 欣蘭 水透透三合一凝凍 洗卸/面膜/精華霜 150g。</p>
-                <p class="card-text">NT850</p>
-                <a href="#" class="btn btn-primary">更多資訊</a>
-                <a href="#" class="btn btn-success">放購物車</a>
-              </div>
-            </div>
-            <div class="card col-md-3">
-              <img src="./product_img/pic0303.jpg" class="card-img-top" alt="森下仁丹整晚貼眼膜">
-              <div class="card-body">
-                <h5 class="card-title">森下仁丹整晚貼眼膜</h5>
-                <p class="card-text">日本森下仁丹整晚貼眼膜 5對/盒，長效整晚貼，慢速釋放保濕因子。</p>
-                <p class="card-text">NT300</p>
-                <a href="#" class="btn btn-primary">更多資訊</a>
-                <a href="#" class="btn btn-success">放購物車</a>
-              </div>
-            </div>
-            <div class="card col-md-3">
-              <img src="./product_img/pic0304.jpg" class="card-img-top" alt="【美爽爽】泡泡染">
-              <div class="card-body">
-                <h5 class="card-title">【美爽爽】泡泡染</h5>
-                <p class="card-text">【美爽爽】泡泡染BUBBLE COLOR系列，任意顏色，買五送二。</p>
-                <p class="card-text">NT3250</p>
-                <a href="#" class="btn btn-primary">更多資訊</a>
-                <a href="#" class="btn btn-success">放購物車</a>
-              </div>
-            </div> -->
           </div>
-          <!-- <div class="row mt-2">
-                  <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-center">
-                      <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                          <span aria-hidden="true">&laquo;</span>
-                        </a>
-                      </li>
-                      <li class="page-item"><a class="page-link" href="#">1</a></li>
-                      <li class="page-item active"><a class="page-link" href="#">2</a></li>
-                      <li class="page-item"><a class="page-link" href="#">3</a></li>
-                      <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                          <span aria-hidden="true">&raquo;</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div> -->
         </div>
       </div>
     </div>
