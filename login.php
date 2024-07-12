@@ -3,7 +3,7 @@ session_start();
 //如果沒有登入Session值或是Session值為空則執行登入動作
 if(!isset($_SESSION["loginMember"]) || ($_SESSION["loginMember"]=="")){
 	if(isset($_POST["username"]) && isset($_POST["passwd"])){
-		require_once("connMysql.php");		
+		require_once("./conections/connMysql.php");		
 		//選取儲存帳號密碼的資料表
 		$sql_query = "SELECT * FROM admin";
 		$result = $db_link->query($sql_query);		
@@ -17,7 +17,7 @@ if(!isset($_SESSION["loginMember"]) || ($_SESSION["loginMember"]=="")){
 			$_SESSION["loginMember"]=$username;
 			header("Location: admin.php");
 		}else{
-			header("Location: index.php");
+			header("Location: admin.php");
 		}		
 	}
 }else{
@@ -36,7 +36,7 @@ if(!isset($_SESSION["loginMember"]) || ($_SESSION["loginMember"]=="")){
   <tr>
    <td height="124" valign="top" background="images/album_r1_c1.jpg"><div class="titleDiv"> [生活、旅行的記錄]<br />
    </div>
-    <div class="menulink"><a href="index.php">[相簿首頁]</a> <a href="login.php">[相簿管理]</a></div></td>
+    <div class="menulink"><a href="index.php">[相簿首頁]</a> <a href="admin.php">[相簿管理]</a></div></td>
   </tr>
   <tr>
    <td background="images/album_r2_c1.jpg"><div id="mainRegion">

@@ -34,13 +34,19 @@ $total_pages = ceil($total_records / $pageRow_records);
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
   <link rel="stylesheet" href="css/website_s01.css">
+  <script language="javascript">
+    function deletesure() {
+      if (confirm('\n您確定要刪除整個相簿嗎?\n刪除後無法恢復!\n')) return true;
+      return false;
+    }
+  </script>
 </head>
 
 <body>
   <section id="header">
     <nav class="navbar navbar-expand-sm fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="./images/logo.jpg" class="img-fluid rounded-circle" alt="電商藥粧"></a>
+        <a class="navbar-brand" href="./index.php"><img src="./images/logo.jpg" class="img-fluid rounded-circle" alt="電商藥粧"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -48,7 +54,7 @@ $total_pages = ceil($total_records / $pageRow_records);
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
 
             <li class="nav-item">
-              <a class="nav-link" href="#"><span class="text-primary">相簿管理</span></a>
+              <a class="nav-link" href="./admin.php"><span class="text-primary">相簿管理</span></a>
             </li>
 
             <li class="nav-item">
@@ -208,10 +214,19 @@ $total_pages = ceil($total_records / $pageRow_records);
         <div class="col-md-10">
           <div class="row text-center">
 
+            <!-- As a heading -->
+            <nav class="navbar bg-light">
+              <div class="container-fluid">
+                <span class="navbar-brand mb-0 h1"><a href="#">[管理首頁]</a> <a href="./index.php">[登出系統]</a></span>
+              </div>
+            </nav>
+
             <!-- 顯示商品資訊 -->
             <?php while ($row_RecAlbum = $RecAlbum->fetch_assoc()) { ?>
               <div class="card col-md-3">
-                <img src="photos/<?php echo $row_RecAlbum["ap_picurl"]; ?>" alt="<?php echo $row_RecAlbum["album_title"]; ?>" />
+                <a href="adminfix.php?id=<?php echo $row_RecAlbum["album_id"]; ?>">
+                  <span class="card"><img src="photos/<?php echo $row_RecAlbum["ap_picurl"]; ?>" alt="<?php echo $row_RecAlbum["album_title"]; ?>" /></span>
+                </a>
                 <div class="card-body">
                   <div class="card-body">
                     <h5 class="card-title"><?php echo $row_RecAlbum["album_title"]; ?></h5>
@@ -232,14 +247,32 @@ $total_pages = ceil($total_records / $pageRow_records);
                       <br>
                       <a href="?action=delete&id=<?php echo $row_RecAlbum["album_id"]; ?>" class="smalltext" onClick="javascript:return deletesure();">(刪除相簿)</a><br>
                     </div>
-                    <!-- <div class="albuminfo"><a href="adminfix.php?id=<?php echo $row_RecAlbum["album_id"]; ?>"><?php echo $row_RecAlbum["album_title"]; ?></a><br />
-                      <span class="smalltext">共 <?php echo $row_RecAlbum["albumNum"]; ?> 張</span><br>
-                    </div> -->
                   </div>
                 </div>
               </div>
             <?php } ?>
 
+            <div class="row mt-2">
+              <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <!-- 相簿管理程式_舊版 -->
 
             <table width="778" border="0" align="center" cellpadding="0" cellspacing="0">
               <tr>
@@ -260,7 +293,15 @@ $total_pages = ceil($total_records / $pageRow_records);
                           <div class="normaldesc"></div>
                           <?php while ($row_RecAlbum = $RecAlbum->fetch_assoc()) { ?>
                             <div class="albumDiv">
-                              <div class="picDiv"><a href="adminfix.php?id=<?php echo $row_RecAlbum["album_id"]; ?>"><?php if ($row_RecAlbum["albumNum"] == 0) { ?><img src="images/nopic.png" alt="暫無圖片" width="120" height="120" border="0" /><?php } else { ?><img src="photos/<?php echo $row_RecAlbum["ap_picurl"]; ?>" alt="<?php echo $row_RecAlbum["album_title"]; ?>" width="120" height="120" border="0" /><?php } ?></a></div>
+                              <div class="picDiv">
+                                <a href="adminfix.php?id=<?php echo $row_RecAlbum["album_id"]; ?>">
+                                  <?php if ($row_RecAlbum["albumNum"] == 0) { ?>
+                                    <img src="images/nopic.png" alt="暫無圖片" width="120" height="120" border="0" />
+                                  <?php } else { ?>
+                                    <img src="photos/<?php echo $row_RecAlbum["ap_picurl"]; ?>" alt="<?php echo $row_RecAlbum["album_title"]; ?>" width="120" height="120" border="0" />
+                                  <?php } ?>
+                                </a>
+                              </div>
                               <div class="albuminfo"><a href="adminfix.php?id=<?php echo $row_RecAlbum["album_id"]; ?>"><?php echo $row_RecAlbum["album_title"]; ?></a><br />
                                 <span class="smalltext">共 <?php echo $row_RecAlbum["albumNum"]; ?> 張</span><br>
                                 <a href="?action=delete&id=<?php echo $row_RecAlbum["album_id"]; ?>" class="smalltext" onClick="javascript:return deletesure();">(刪除相簿)</a><br>

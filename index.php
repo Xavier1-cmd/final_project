@@ -40,7 +40,7 @@ $total_pages = ceil($total_records / $pageRow_records);
   <section id="header">
     <nav class="navbar navbar-expand-sm fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="./images/logo.jpg" class="img-fluid rounded-circle" alt="電商藥粧"></a>
+        <a class="navbar-brand" href="./index.php"><img src="./images/logo.jpg" class="img-fluid rounded-circle" alt="電商藥粧"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -48,7 +48,7 @@ $total_pages = ceil($total_records / $pageRow_records);
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
 
             <li class="nav-item">
-              <a class="nav-link" href="#"><span class="text-primary">相簿管理</span></a>
+              <a class="nav-link" href="./admin.php"><span class="text-primary">相簿管理</span></a>
             </li>
 
             <li class="nav-item">
@@ -206,7 +206,7 @@ $total_pages = ceil($total_records / $pageRow_records);
           </div>
         </div>
         <div class="col-md-10">
-          <!-- <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -243,7 +243,7 @@ $total_pages = ceil($total_records / $pageRow_records);
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
-          </div> -->
+          </div>
           <hr>
           <div class="row text-center">
             <!-- <div class="card col-md-3">
@@ -464,25 +464,25 @@ $total_pages = ceil($total_records / $pageRow_records);
               </div>
             </div> -->
           </div>
-          <!-- <div class="row mt-2">
-                  <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-center">
-                      <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                          <span aria-hidden="true">&laquo;</span>
-                        </a>
-                      </li>
-                      <li class="page-item"><a class="page-link" href="#">1</a></li>
-                      <li class="page-item active"><a class="page-link" href="#">2</a></li>
-                      <li class="page-item"><a class="page-link" href="#">3</a></li>
-                      <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                          <span aria-hidden="true">&raquo;</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div> -->
+          <div class="row mt-2">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-center">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
     </div>
