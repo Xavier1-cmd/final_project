@@ -74,3 +74,7 @@ td > em {
   background-color: #b4b4b4;
   padding-top: 10px;
 }
+
+.page-not-allowed {
+  cursor: not-allowed;
+}

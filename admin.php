@@ -217,6 +217,10 @@ $total_pages = ceil($total_records / $pageRow_records);
             <!-- As a heading -->
             <nav class="navbar bg-light">
               <div class="container-fluid">
+                <span class="navbar-brand mt-0 h1">網路相簿管理界面</span>
+                <div class="navbar-brand">相簿總數: <?php echo $total_records; ?>，<a href="adminadd.php">新增相簿</a></div>
+              </div>
+              <div class="container-fluid">
                 <span class="navbar-brand mb-0 h1"><a href="#">[管理首頁]</a> <a href="./index.php">[登出系統]</a></span>
               </div>
             </nav>
@@ -256,94 +260,70 @@ $total_pages = ceil($total_records / $pageRow_records);
               <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-center">
                   <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                      <span aria-hidden="true">&laquo;</span>
-                    </a>
+                    <?php if ($num_pages > 1) { // 若不是第一頁則顯示 
+                    ?>
+                      <a class="page-link" href="?page=<?php echo $num_pages - 1; ?>" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    <?php } else { // 若是第一頁則顯示禁止 
+                    ?>
+                      <span class="page-link page-not-allowed" aria-hidden="false" aria-label="Previous">&laquo;</span>
+                    <?php } ?>
                   </li>
-                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item active"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                      <span aria-hidden="true">&raquo;</span>
-                    </a>
-                  </li>
+                  <?php
+                  for ($i = 1; $i <= $total_pages; $i++) {
+                    if ($i == $num_pages) {
+                      echo "<li class='page-item page-link active'>$i</li>";
+                    } else {
+                      echo "<li class='page-item'><a class='page-link' href='?page=$i'>$i</a></li>";
+                    }
+                  }
+                  ?>
+                  <?php if ($num_pages < $total_pages) { // 若不是最後一頁則顯示 
+                  ?>
+                    <li class="page-item">
+                      <a class="page-link" href="?page=<?php echo $num_pages + 1; ?>" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  <?php } else { // 若是最後一頁則顯示禁止 
+                  ?>
+                    <li class="page-item">
+                      <span class="page-link page-not-allowed" aria-label="Next">
+                        <span aria-hidden="false">&raquo;</span>
+                      </span>
+                    </li>
+                  <?php } ?>
                 </ul>
               </nav>
             </div>
 
-            <!-- 相簿管理程式_舊版 -->
+            <!-- 相簿管理程式_舊版，只留 Pagination 範例 -->
 
-            <table width="778" border="0" align="center" cellpadding="0" cellspacing="0">
-              <tr>
-                <td height="124" valign="top" background="images/">
-                  <div class="titleDiv"> [生活、旅行的記錄]<br />
-                  </div>
-                  <div class="menulink"><a href="admin.php">[管理首頁]</a> <a href="?logout=true">[登出系統]</a></div>
-                </td>
-              </tr>
-              <tr>
-                <td background="images/album_r2_c1.jpg">
-                  <div id="mainRegion">
-                    <table width="90%" border="0" align="center" cellpadding="4" cellspacing="0">
-                      <tr>
-                        <td>
-                          <div class="subjectDiv"> 網路相簿管理界面 </div>
-                          <div class="actionDiv">相簿總數: <?php echo $total_records; ?>，<a href="adminadd.php">新增相簿</a></div>
-                          <div class="normaldesc"></div>
-                          <?php while ($row_RecAlbum = $RecAlbum->fetch_assoc()) { ?>
-                            <div class="albumDiv">
-                              <div class="picDiv">
-                                <a href="adminfix.php?id=<?php echo $row_RecAlbum["album_id"]; ?>">
-                                  <?php if ($row_RecAlbum["albumNum"] == 0) { ?>
-                                    <img src="images/nopic.png" alt="暫無圖片" width="120" height="120" border="0" />
-                                  <?php } else { ?>
-                                    <img src="photos/<?php echo $row_RecAlbum["ap_picurl"]; ?>" alt="<?php echo $row_RecAlbum["album_title"]; ?>" width="120" height="120" border="0" />
-                                  <?php } ?>
-                                </a>
-                              </div>
-                              <div class="albuminfo"><a href="adminfix.php?id=<?php echo $row_RecAlbum["album_id"]; ?>"><?php echo $row_RecAlbum["album_title"]; ?></a><br />
-                                <span class="smalltext">共 <?php echo $row_RecAlbum["albumNum"]; ?> 張</span><br>
-                                <a href="?action=delete&id=<?php echo $row_RecAlbum["album_id"]; ?>" class="smalltext" onClick="javascript:return deletesure();">(刪除相簿)</a><br>
-                              </div>
-                            </div>
-                          <?php } ?>
-                          <div class="navDiv">
-                            <?php if ($num_pages > 1) { // 若不是第一頁則顯示 
-                            ?>
-                              <a href="?page=1">|&lt;</a> <a href="?page=<?php echo $num_pages - 1; ?>">&lt;&lt;</a>
-                            <?php } else { ?>
-                              |&lt; &lt;&lt;
-                            <?php } ?>
-                            <?php
-                            for ($i = 1; $i <= $total_pages; $i++) {
-                              if ($i == $num_pages) {
-                                echo $i . " ";
-                              } else {
-                                echo "<a href=\"?page=$i\">$i</a> ";
-                              }
-                            }
-                            ?>
-                            <?php if ($num_pages < $total_pages) { // 若不是最後一頁則顯示 
-                            ?>
-                              <a href="?page=<?php echo $num_pages + 1; ?>">&gt;&gt;</a> <a href="?page=<?php echo $total_pages; ?>">&gt;|</a>
-                            <?php } else { ?>
-                              &gt;&gt; &gt;|
-                            <?php } ?>
-                          </div>
-                        </td>
-                      </tr>
-                    </table>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td align="center" background="images/album_r2_c1.jpg" class="trademark">© 2016 eHappy Studio All Rights Reserved.</td>
-              </tr>
-              <tr>
-                <td><img name="album_r4_c1" src="images/album_r4_c1.jpg" width="778" height="24" border="0" id="album_r4_c1" alt="" /></td>
-              </tr>
-            </table>
+            <!-- <div class="navDiv">
+              <?php if ($num_pages > 1) { // 若不是第一頁則顯示 
+              ?>
+                <a href="?page=1">|&lt;</a> <a href="?page=<?php echo $num_pages - 1; ?>">&lt;&lt;</a>
+              <?php } else { ?>
+                |&lt; &lt;&lt;
+              <?php } ?>
+              <?php
+              for ($i = 1; $i <= $total_pages; $i++) {
+                if ($i == $num_pages) {
+                  echo $i . " ";
+                } else {
+                  echo "<a href=\"?page=$i\">$i</a> ";
+                }
+              }
+              ?>
+              <?php if ($num_pages < $total_pages) { // 若不是最後一頁則顯示 
+              ?>
+                <a href="?page=<?php echo $num_pages + 1; ?>">&gt;&gt;</a> <a href="?page=<?php echo $total_pages; ?>">&gt;|</a>
+              <?php } else { ?>
+                &gt;&gt; &gt;|
+              <?php } ?>
+            </div> -->
+
 
           </div>
         </div>

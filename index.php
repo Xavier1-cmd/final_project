@@ -558,3 +558,7 @@ $total_pages = ceil($total_records / $pageRow_records);
 </body>
 
 </html>
+
+<?php
+$db_link->close();
+?>
