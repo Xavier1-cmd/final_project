@@ -277,11 +277,11 @@ if (isset($_POST["action"]) && ($_POST["action"] == "add")) {
                 <div class="navbar-brand">相簿總數: <?php echo $total_records; ?>，<a href="#" onClick="window.history.back();">回上一頁</a></div>
               </div>
               <div class="container-fluid">
-                <span class="navbar-brand mb-0 h1"><a href="./admin.php?page=1">[管理首頁]</a> <a href="./index.php">[登出系統]</a></span>
+                <span class="navbar-brand mb-0 h1"><a href="./admin.php">[管理首頁]</a> <a href="./index.php">[登出系統]</a></span>
               </div>
             </nav>
 
-            <!-- 新增相簿程式_舊版 -->
+            <!-- 新增相簿程式 -->
             <table width="778" border="0" align="center" cellpadding="0" cellspacing="0">
               <tr>
                 <td style="background-color: #fff;">
@@ -397,3 +397,7 @@ if (isset($_POST["action"]) && ($_POST["action"] == "add")) {
 </body>
 
 </html>
+
+<?php
+	$db_link->close();
+?>

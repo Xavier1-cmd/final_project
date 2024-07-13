@@ -19,6 +19,7 @@ function GetSQLValueString($theValue, $theType) {
 
 require_once("./conections/connMysql.php");
 
+//顯示相簿資訊SQL敘述句
 $sid = 0;
 if(isset($_GET["id"])&&($_GET["id"]!="")){
 	$sid = GetSQLValueString($_GET["id"],"int");
@@ -262,7 +263,7 @@ $total_pages = ceil($total_records / $pageRow_records);
                 <div class="navbar-brand">相簿總數: <?php echo $total_records; ?>，<a href="adminadd.php">新增相簿</a></div>
               </div>
               <div class="container-fluid">
-                <span class="navbar-brand mb-0 h1"><a href="#">[管理首頁]</a> <a href="./index.php">[登出系統]</a></span>
+                <span class="navbar-brand mb-0 h1"><a href="./admin.php">[管理首頁]</a> <a href="./index.php">[登出系統]</a></span>
               </div>
             </nav>
 
@@ -442,3 +443,7 @@ $total_pages = ceil($total_records / $pageRow_records);
 </body>
 
 </html>
+
+<?php
+	$db_link->close();
+?>
