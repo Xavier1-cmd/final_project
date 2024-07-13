@@ -16,7 +16,7 @@ function GetSQLValueString($theValue, $theType) {
   }
   return $theValue;
 }
-require_once("connMysql.php");
+require_once("./conections/connMysql.php");
 $pid = 0;
 if(isset($_GET["id"])&&($_GET["id"]!="")){
 	$pid = GetSQLValueString($_GET["id"],"int");
