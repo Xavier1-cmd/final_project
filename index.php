@@ -464,22 +464,45 @@ $total_pages = ceil($total_records / $pageRow_records);
               </div>
             </div> -->
           </div>
+
           <div class="row mt-2">
             <nav aria-label="Page navigation example">
               <ul class="pagination justify-content-center">
                 <li class="page-item">
-                  <a class="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                  </a>
+                  <?php if ($num_pages > 1) { // 若不是第一頁則顯示 
+                  ?>
+                    <a class="page-link" href="?page=<?php echo $num_pages - 1; ?>" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  <?php } else { // 若是第一頁則顯示禁止 
+                  ?>
+                    <span class="page-link page-not-allowed" aria-hidden="false" aria-label="Previous">&laquo;</span>
+                  <?php } ?>
                 </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item active"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                  <a class="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                  </a>
-                </li>
+                <?php
+                for ($i = 1; $i <= $total_pages; $i++) {
+                  if ($i == $num_pages) {
+                    echo "<li class='page-item page-link active'>$i</li>";
+                  } else {
+                    echo "<li class='page-item'><a class='page-link' href='?page=$i'>$i</a></li>";
+                  }
+                }
+                ?>
+                <?php if ($num_pages < $total_pages) { // 若不是最後一頁則顯示 
+                ?>
+                  <li class="page-item">
+                    <a class="page-link" href="?page=<?php echo $num_pages + 1; ?>" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                <?php } else { // 若是最後一頁則顯示禁止 
+                ?>
+                  <li class="page-item">
+                    <span class="page-link page-not-allowed" aria-label="Next">
+                      <span aria-hidden="false">&raquo;</span>
+                    </span>
+                  </li>
+                <?php } ?>
               </ul>
             </nav>
           </div>

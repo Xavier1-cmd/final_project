@@ -1,5 +1,46 @@
 <?php
+function GetSQLValueString($theValue, $theType) {
+  switch ($theType) {
+    case "string":
+      $theValue = ($theValue != "") ? filter_var($theValue, FILTER_SANITIZE_ADD_SLASHES) : "";
+      break;
+    case "int":
+      $theValue = ($theValue != "") ? filter_var($theValue, FILTER_SANITIZE_NUMBER_INT) : "";
+      break;
+    case "email":
+      $theValue = ($theValue != "") ? filter_var($theValue, FILTER_VALIDATE_EMAIL) : "";
+      break;
+    case "url":
+      $theValue = ($theValue != "") ? filter_var($theValue, FILTER_VALIDATE_URL) : "";
+      break;      
+  }
+  return $theValue;
+}
+
 require_once("./conections/connMysql.php");
+
+$sid = 0;
+if(isset($_GET["id"])&&($_GET["id"]!="")){
+	$sid = GetSQLValueString($_GET["id"],"int");
+}
+
+//刪除相簿
+if(isset($_GET["action"])&&($_GET["action"]=="delete")){
+	//刪除所屬相片
+	$query_delphoto = "SELECT * FROM albumphoto WHERE album_id={$sid}";
+	$delphoto = $db_link->query($query_delphoto);
+	while($row_delphoto=$delphoto->fetch_assoc()){
+		unlink("photos/".$row_delphoto["ap_picurl"]);
+	}
+	//刪除相簿
+	$query_del1 = "DELETE FROM album WHERE album_id={$sid}";
+	$query_del2 = "DELETE FROM albumphoto WHERE album_id={$sid}";
+	$db_link->query($query_del1);
+	$db_link->query($query_del2); 
+	//重新導向回到主畫面
+	header("Location: admin.php");
+}
+
 //預設每頁筆數
 $pageRow_records = 4;
 //預設頁數
