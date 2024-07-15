@@ -1,7 +1,7 @@
 <?php
 require_once("./conections/connMysql.php");
 //預設每頁筆數
-$pageRow_records = 4;
+$pageRow_records = 12;
 //預設頁數
 $num_pages = 1;
 //若已經有翻頁，將頁數更新
@@ -261,7 +261,15 @@ $total_pages = ceil($total_records / $pageRow_records);
             <!-- 顯示商品資訊 -->
             <?php while ($row_RecAlbum = $RecAlbum->fetch_assoc()) { ?>
               <div class="card col-md-3">
-                <img src="photos/<?php echo $row_RecAlbum["ap_picurl"]; ?>" alt="<?php echo $row_RecAlbum["album_title"]; ?>" />
+                <a href="albumshow.php?id=<?php echo $row_RecAlbum["album_id"]; ?>">
+                  <?php if ($row_RecAlbum["albumNum"] == 0) { ?>
+                    <img src="images/nopic.png" alt="暫無圖片">
+                  <?php } else { ?>
+                    <span class="card border-0">
+                      <img src="photos/<?php echo $row_RecAlbum["ap_picurl"]; ?>" alt="<?php echo $row_RecAlbum["album_title"]; ?>">
+                    </span>
+                  <?php } ?>
+                </a>
                 <div class="card-body">
                   <div class="card-body">
                     <h5 class="card-title"><?php echo $row_RecAlbum["album_title"]; ?></h5>
@@ -270,14 +278,8 @@ $total_pages = ceil($total_records / $pageRow_records);
                     <p class="card-text">TWD $1,650</p>
                     <a href="#" class="btn btn-primary">更多資訊</a>
                     <a href="#" class="btn btn-success">放購物車</a>
-                    <!-- <a href="albumshow.php?id=<?php echo $row_RecAlbum["album_id"]; ?>">
-                      <?php if ($row_RecAlbum["albumNum"] == 0) { ?>
-                        <img src="images/nopic.png" alt="暫無圖片" width="120" height="120" border="0" />
-                      <?php } else { ?>
-                        <img src="photos/<?php echo $row_RecAlbum["ap_picurl"]; ?>" alt="<?php echo $row_RecAlbum["album_title"]; ?>" width="120" height="120" border="0" />
-                      <?php } ?>
-                    </a> -->
-                    <div class="albuminfo"><a href="albumshow.php?id=<?php echo $row_RecAlbum["album_id"]; ?>"><?php echo $row_RecAlbum["album_title"]; ?></a><br />
+                    <div class="albuminfo">
+                      <a href="albumshow.php?id=<?php echo $row_RecAlbum["album_id"]; ?>"><?php echo $row_RecAlbum["album_title"]; ?></a><br />
                       <span class="smalltext">共 <?php echo $row_RecAlbum["albumNum"]; ?> 張</span><br>
                       <br>
                     </div>
