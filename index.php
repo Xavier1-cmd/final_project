@@ -1,7 +1,7 @@
 <?php
 require_once("./conections/connMysql.php");
 //預設每頁筆數
-$pageRow_records = 12;
+$pageRow_records = 6;
 //預設頁數
 $num_pages = 1;
 //若已經有翻頁，將頁數更新
@@ -260,7 +260,7 @@ $total_pages = ceil($total_records / $pageRow_records);
 
             <!-- 顯示商品資訊 -->
             <?php while ($row_RecAlbum = $RecAlbum->fetch_assoc()) { ?>
-              <div class="card col-md-3">
+              <div class="card col-md-4">
                 <a href="albumshow.php?id=<?php echo $row_RecAlbum["album_id"]; ?>">
                   <?php if ($row_RecAlbum["albumNum"] == 0) { ?>
                     <img src="images/nopic.png" alt="暫無圖片">
